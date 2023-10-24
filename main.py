@@ -42,3 +42,32 @@ def inverted_word_factory(*args):
 words = ["eae", "amigão", "belezinha?"]
 inverted_words = inverted_word_factory(*words)
 # print(inverted_words)
+
+
+# part_5
+def dictionary_separator(**kwargs):
+    keys = list(kwargs.keys())
+    values = list(kwargs.values())
+    return (keys, values)
+
+
+user = {"name": "Naruto", "age": 16, "favorite word": "Ichiraku Ramen"}
+items = dictionary_separator(**user)
+# print(items[0])
+# print(items[1])
+
+
+# part_6
+def dictionary_creator(*args, **kwargs):
+    if len(args) < len(kwargs):
+        return None
+    else:
+        result_dict = dict(zip(args, kwargs.values()))
+        return result_dict
+
+
+change_keys = ["username", "password", "address"]
+user = {"name": "Williams", "some_key": "1234"}
+
+modified_user = dictionary_creator(*change_keys, **user)
+print(modified_user)
