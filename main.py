@@ -85,4 +85,18 @@ def purchase_logger(**kwargs):
 purchase = {"name": "bolacha trakinas", "price": 2.9, "quantity": 4}
 
 purchase_log = purchase_logger(**purchase)
-print(purchase_log)
+# print(purchase_log)
+
+
+# part_7
+def world_cup_logger(country, *args):
+    sorted_years = sorted(args)
+    years_str = ", ".join(map(str, sorted_years))
+    result = f"{country} - {years_str}"
+    return result
+
+
+country = "Alemanha"
+year_list = [2014, 1990, 1974, 1954]
+log = world_cup_logger(country, *year_list)
+print(log)
