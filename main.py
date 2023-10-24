@@ -68,6 +68,21 @@ def dictionary_creator(*args, **kwargs):
 
 change_keys = ["username", "password", "address"]
 user = {"name": "Williams", "some_key": "1234"}
-
 modified_user = dictionary_creator(*change_keys, **user)
-print(modified_user)
+# print(modified_user)
+
+
+# part_6
+def purchase_logger(**kwargs):
+    quantity = kwargs.get("quantity", "N/A")
+    name = kwargs.get("name", "N/A")
+    price = kwargs.get("price", "N/A")
+
+    product_info = f"{quantity} {name} bought by {price}"
+    return product_info
+
+
+purchase = {"name": "bolacha trakinas", "price": 2.9, "quantity": 4}
+
+purchase_log = purchase_logger(**purchase)
+print(purchase_log)
