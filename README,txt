@@ -1,1 +1,60 @@
-I
+Exercitando packing e unpacking
+
+Defina as seguintes funções, observando os exemplos de retorno de cada uma:
+
+sum_numbers
+Parâmetro:
+*args: Quantidade indefinida de parâmetros numéricos inteiros.
+Procedimento: Somar cada um dos valores recebidos em args.
+Retorno: A soma de cada um dos valores recebidos em args.
+
+get_multiplied_amount
+Parâmetros:
+multiplier: Número inteiro utilizado como multiplicador;
+*args: Quantidade indefinida de parâmetros numéricos inteiros;
+Procedimento: Somar cada um dos valores recebidos em args e multiplicar essa soma por multiplier.
+Retorno: O resultado das operações como valor numérico.
+
+word_concatenator
+Parâmetros:
+*args: Quantidade indefinida de palavras;
+Procedimento: Concatenar cada uma das palavras recebidas em args aplicando um espaço como separador. Não pode haver espaço após a última palavra;
+Retorno: Uma string contendo todas as palavras concatenadas;
+
+inverted_word_factory
+Parâmetros:
+*args: Quantidade indefinida de palavras;
+Procedimento: Concatenar cada uma das palavras recebidas em args, porém cada palavra deve estar invertida, assim como a ordem das palavras;
+Retorno: Uma string contendo todas as palavras concatenadas, porém, cada uma delas devem estar invertidas, inclusive a ordem das palavras;
+
+dictionary_separator
+Parâmetros:
+**kwargs: Dicionário contendo uma quantidade indefinida de itens;
+Procedimento:
+Agrupar em uma lista todas as chaves do dicionário kwargs;
+Agrupar em uma lista todas as valores do dicionário kwargs;
+Retorno: Retornar uma tupla de duas posições, na primeira posição a lista de chaves do dicionário kwargs, na segunda posição uma lista de valores do dicionário kwargs;
+
+dictionary_creator
+Parâmetros:
+*args: Quantidade indefinida de valores (podem ser inteiros ou string);
+**kwargs: Dicionário contendo uma quantidade indefinida de itens.
+Procedimento:
+Uma chave na posição 2 do dicionário, deve ser substituída pelo valor de posição 2 dentro da tupla args, essa ordem deve ser seguida de forma respectiva;
+Caso a quantidade de valores dentro da tupla args seja maior que a quantidade de itens no dicionário, ignorar os valores excedentes em args;
+Retorno:
+Retornar None, caso a quantidade de valores dentro da tupla args seja menor que a quantidade de itens em kwargs.
+Retornar um dicionário, caso a quantidade de valores dentro da tupla args seja igual ou maior a quantidade de itens em kwargs.
+
+purchase_logger(**kwargs)
+Parâmetros: 
+**kwargs: Dicionário contendo uma quantidade indefinida de itens.
+Procedimento: Formar uma string contendo as informações do produto;
+Retorno: String formada com quantidade, nome do produto e seu preço;
+
+world_cup_logger(country, *args)
+Parâmetros:
+country: Uma string representando um país;
+*args: Anos das copas do mundo em que o país foi campeão (lista de números inteiros);
+Procedimento: Formar uma string com o nome do país e os anos em que foi campeão, em ordem crescente;
+Retorno: String formada com o nome do país e os anos em que foi campeão, exatamente como no exemplo;
